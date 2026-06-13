@@ -1049,3 +1049,55 @@ video {
 .card:hover {
   transform: translateY(-4px);
 }
+
+
+.api-form-tile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #f4f3ee;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+
+}
+
+.api-form {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background: #759aab;
+    flex: 1;
+    gap: 1rem;   
+    padding: 1rem;
+    
+
+}
+
+.checkbox-selection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.api-call-button {
+    width: auto;
+    align-self: center;
+    padding: 0.5rem 1rem;
+    color:#fff;
+    background: #3b57f1;
+}
+
+.api-results {
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
+}
