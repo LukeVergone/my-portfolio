@@ -18,22 +18,37 @@ form.addEventListener("submit", function (event) {
 
   let isValid = true;
 
-  if (nameInput.value.trim() === "") {
-    nameError.textContent = "A name must be entered";
+  // Regex validation Patterns
+  const nameFieldValidPattern = /^[A-Za-z][A-Za-z -]{1,50}$/; 
+  const emailFieldValidPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const messageFieldValidPattern = /^.{5,500}$/;
+  
+
+  // Name field validation
+
+  if (nameFieldValidPattern.test(nameInput.value.trim()) === false) {
+    nameError.textContent = "A valid name must be entered (Letters & spaces only and 1-50 characters)";
     isValid = false;
   }
 
-  if (emailInput.value.trim() === "") {
+  // Email field validation
+  if (emailFieldValidPattern.test(emailInput.value.trim()) === false) {
     emailError.textContent = "A valid email address must be entered";
     isValid = false;
   }
 
-  if (messageInput.value.trim() === "") {
-    messageError.textContent = "A message must be entered";
+  // Message field validation
+  if (messageFieldValidPattern.test(messageInput.value.trim()) === false) {
+    messageError.textContent = "A message between 5 and 500 characters must be entered";
     isValid = false;
   }
 
   if (!isValid) {
     event.preventDefault();
   }
+
+  else {
+    alert("Your message has been sent.");
+  }
+
 });
