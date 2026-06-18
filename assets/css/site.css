@@ -755,6 +755,15 @@ video {
   justify-content: space-between;
 }
 
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+  text-align-last: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1055,6 +1064,7 @@ video {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 320px;
     background: #f4f3ee;
     color: rgb(0, 0, 0);
     justify-content: center;
